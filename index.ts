@@ -435,7 +435,7 @@ async function run() {
  * node-cron 依赖 Node.js 进程持续运行。
  * 如果终端关闭、服务器关机、进程退出，定时任务就不会执行。
  */
-cron.schedule("20 17 * * *", () => {
+cron.schedule("0 17 * * *", () => {
   run().catch((error) => {
     console.error("定时任务失败：", error.response?.data || error.message);
   });
